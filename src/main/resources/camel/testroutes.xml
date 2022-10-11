@@ -1,0 +1,20 @@
+<routes>
+  <route>
+    <from uri="direct:hello"/>
+    <log message="hello ....." />
+    <transform>
+      <constant>Hello World</constant>
+    </transform>
+  </route>
+
+  <route>
+    <from uri="direct:filedownload"/>
+    <log message="file download ....." />
+    <pollEnrich>
+      <constant>file:/Users/test?fileName=pod.yaml&amp;noop=true&amp;idempotent=false</constant>
+    </pollEnrich>
+    <setHeader name="Content-Disposition">
+      <simple>attachment;filename=download_pod.yaml</simple>
+    </setHeader>
+  </route>
+</routes>

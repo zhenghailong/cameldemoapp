@@ -1,0 +1,16 @@
+<rests>
+  <rest path="demo">
+    <description>demo REST API</description>
+    <get produces="application/json">
+      <to uri="direct:hello"/>
+    </get>
+  </rest>
+
+  <rest path="/file">
+    <description>file download REST API</description>
+
+    <get produces="application/octet-stream">
+      <to uri="direct:filedownload"/>
+    </get>
+  </rest>
+</rests>

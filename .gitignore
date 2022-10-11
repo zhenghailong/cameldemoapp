@@ -1,0 +1,17 @@
+*.class
+*.jar
+*.war
+*.ear
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Maven
+target
+build
+
+# Other
+*.log
+*.swp
+*.bak
